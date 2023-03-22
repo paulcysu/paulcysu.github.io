@@ -1,6 +1,10 @@
+import CardSelection from "features/card-game/CardSelection"
+
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+      <CardSelection />
+    </div>
   )
 }
 

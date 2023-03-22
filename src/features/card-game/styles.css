@@ -1,0 +1,12 @@
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  min-height: 100vh;
+}
+
+.sword {
+  height: 350px;
+  width: 100%;
+}
