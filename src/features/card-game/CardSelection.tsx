@@ -5,7 +5,7 @@ import './styles.css'
 function CardSelection() {
   return (
     <div className='cards-container'>
-      <Card name='sword'>
+      <Card>
         <Sword className="sword" fill='red' stroke='green'/>
       </Card>
     </div>

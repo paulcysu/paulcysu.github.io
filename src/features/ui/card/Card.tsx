@@ -1,22 +1,38 @@
-import { useState } from 'react'
+import { useEffect, useState, MouseEvent } from 'react'
 import "./style.css"
 
 type CardProp = {
-  name: string,
   img?: any,
-  children?: JSX.Element
+  children?: JSX.Element 
 }
 
 function Card(props: CardProp) {
-  const {name, img, children} = props
+  const {children} = props
 
-  const [mouse, setMouse] = useState({x: 0, y: 0})
-  const [cursor, setCursor] = useState({x: 0, y: 0})
+  const [rotation, setRotation] = useState({x: 26, y: 48})
 
-  const speed = 0.01
+  const handleMouseMove = (e: MouseEvent) => {
+    let middleX, middleY, offsetX, offsetY, degreeX, degreeY
+    middleX = window.innerWidth / 2
+    middleY = window.innerHeight / 2
+    offsetX = e.clientX - middleX
+    offsetY = e.clientY - middleY
+    degreeX = (offsetX / middleX) * 200
+    degreeY = (offsetX / middleY) * 200
+    setRotation({
+      x: degreeX,
+      y: degreeY
+    })
+  }
 
   return (
-    <div className="card-container">
+    <div 
+      className="card-container"
+      onMouseMove={handleMouseMove}
+      style={{
+        transform: `perspective(3000px) rotateY(${-1 * rotation.x}deg) rotateX(${rotation.y}deg)`
+      }}
+    >
       <div className="card-golden-border">
         {children}
       </div>
