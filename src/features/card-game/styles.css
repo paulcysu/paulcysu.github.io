@@ -1,4 +1,5 @@
-.cards-container {
+.card-selection {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,7 +7,31 @@
   min-height: 100vh;
 }
 
+.card-selection-instruction {
+  position: absolute;
+  bottom: 5vh;
+  font-size: 1.5rem;
+}
+
+.author-name {
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+  font-size: 2rem;
+  margin: 0
+}
+
 .sword {
   height: 350px;
   width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .author-name {
+    top: auto;
+    bottom: 2vh;
+    right: 2vw;
+    font-size: 3rem;
+    margin: 0
+  }
 }

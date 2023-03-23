@@ -6,6 +6,8 @@ import {
 } from "react-router-dom"
 import Home from 'pages/Home'
 import ErrorPage from 'pages/ErrorPage'
+import { MouseProvider } from "features/mouse-move/MouseContext"
+
 import './main.css'
 
 const router = createBrowserRouter([
@@ -18,6 +20,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <MouseProvider>
+      <RouterProvider router={router} />
+    </MouseProvider>
   </React.StrictMode>,
 )
