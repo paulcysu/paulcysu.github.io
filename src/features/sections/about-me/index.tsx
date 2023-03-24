@@ -10,7 +10,7 @@ const AboutMe = () => {
   const meStartPositionX = 2000
   const lightStartPositionX = -800
 
-  let meCurrentPosition = Math.max(meStartPositionX - y , 320)
+  let meCurrentPosition = Math.max(meStartPositionX - y, 320)
   let lightCurrentPosition = Math.min(lightStartPositionX + y * 0.4, 50)
 
   // maybe like window width determine scroll speed
