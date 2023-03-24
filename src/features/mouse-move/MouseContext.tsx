@@ -1,12 +1,12 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer, ReactNode } from 'react'
 
 type MouseProps = {
-  x: number,
+  x: number
   y: number
 }
 
-type MouseProvider = {
-  children: any,
+type MouseProviderProps = {
+  children: ReactNode
 }
 
 const initialMouse: MouseProps = { x: 0, y: 0 }
@@ -14,13 +14,10 @@ const initialMouse: MouseProps = { x: 0, y: 0 }
 const MouseContext = createContext<MouseProps>(initialMouse)
 const MouseDispatchContext = createContext<any>(null)
 
-export const MouseProvider = (props: MouseProvider) => {
-  const {children} = props;
+export const MouseProvider = (props: MouseProviderProps) => {
+  const { children } = props
 
-  const [mouse, dispatch] = useReducer(
-    mouseReducer,
-    initialMouse
-  )
+  const [mouse, dispatch] = useReducer(mouseReducer, initialMouse)
 
   return (
     <MouseContext.Provider value={mouse}>
@@ -32,23 +29,23 @@ export const MouseProvider = (props: MouseProvider) => {
 }
 
 export function useMouse() {
-  return useContext(MouseContext);
+  return useContext(MouseContext)
 }
 
 export function useMouseDispatch() {
-  return useContext(MouseDispatchContext);
+  return useContext(MouseDispatchContext)
 }
 
 function mouseReducer(state: any, action: any) {
   switch (action.type) {
-    case 'UPDATE_MOUSE_POSITION': 
+    case 'UPDATE_MOUSE_POSITION':
       return {
         ...state,
         x: action.x,
-        y: action.y
+        y: action.y,
       }
     default: {
-      throw new Error('Unknown action: ' + action.type);
+      throw new Error('Unknown action: ' + action.type)
     }
   }
 }

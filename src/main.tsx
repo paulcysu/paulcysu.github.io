@@ -7,9 +7,8 @@ import {
 
 import Home from 'pages/Home'
 import ErrorPage from 'pages/ErrorPage'
-import Portfolio from 'pages/Portfolio'
 import { MouseProvider } from "features/mouse-move/MouseContext"
-import { MantineProvider } from '@mantine/core'
+import { ScrollProvider } from 'features/scroll/ScrollContext'
 import './main.css'
 
 const router = createBrowserRouter([
@@ -22,10 +21,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <MantineProvider withGlobalStyles withNormalizeCSS>
+    <ScrollProvider>
       <MouseProvider>
         <RouterProvider router={router} />
       </MouseProvider>
-    </MantineProvider>
+    </ScrollProvider>
   </React.StrictMode>,
 )

@@ -1,0 +1,65 @@
+.developer {
+  width: 250px;
+}
+
+.parallax {
+  position: relative;
+  display: flex;
+  align-items: end;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.parallax img,
+.parallax svg {
+  pointer-events: none;
+  position: absolute;
+}
+
+.street-light {
+  width: 800px;
+}
+
+.about-me-text-container {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  text-align: right;
+  margin-right: 2rem;
+}
+
+.about-me-text {
+  font-size: 1.5rem;
+}
+
+.about-me-title {
+  font-size: 2.5rem;
+}
+
+.about-me-subtext {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .parallax {
+    position: relative;
+    display: flex;
+    align-items: end;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .about-me-text {
+    font-size: 3rem;
+  }
+  
+  .about-me-title {
+    font-size: 5rem;
+  }
+  
+  .about-me-subtext {
+    font-size: 2rem;
+  }
+}

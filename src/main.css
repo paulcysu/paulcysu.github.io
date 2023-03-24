@@ -1,4 +1,37 @@
+:root {
+  --javascript-yellow: #fcdc00;
+  --python-blue: #3776ab;
+  --python-yellow: #ffd343
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Sans-serif, serif;
+  background: linear-gradient(0deg, black, ivory);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.black {
+  color: black;
+}
+
+.javascript-yellow {
+  color: var(--javascript-yellow)
+}
+
+.python-blue {
+  color: var(--python-blue)
+}
+
+.python-yellow {
+  color: var(--python-yellow)
+}
+
+.python-background {
+  background: black
 }
