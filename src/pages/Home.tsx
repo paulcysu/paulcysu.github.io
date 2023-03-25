@@ -13,7 +13,6 @@ function Home() {
   return (
     <div
       onScroll={(e) => {
-        console.log('onScroll: ', e.currentTarget.scrollTop)
         scrollDispatch({
           type: 'UPDATE_MOUSE_POSITION',
           x: e.currentTarget.scrollTop,
@@ -25,6 +24,13 @@ function Home() {
           type: 'UPDATE_MOUSE_POSITION',
           x: e.clientX,
           y: e.clientY,
+        })
+      }
+      onTouchMove={(e) =>
+        mousedispatch({
+          type: 'UPDATE_MOUSE_POSITION',
+          x: e.touches[0].clientX,
+          y: e.touches[0].clientY,
         })
       }
     >

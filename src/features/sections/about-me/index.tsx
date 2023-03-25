@@ -16,7 +16,7 @@ const positionByScreenMap = {
     'light': {
       'start': -800,
       'stop': 50,
-      'scrollSpeed': 0.4,
+      'scrollSpeed': 0.7,
     }
   },
   'mobile': {
