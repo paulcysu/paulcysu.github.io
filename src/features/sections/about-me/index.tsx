@@ -6,6 +6,7 @@ import Me from 'assets/me.png'
 import StreetLight from 'assets/street-light.png'
 import './styles.css'
 
+
 const positionByScreenMap = {
   'desktop': {
     'me': {
@@ -33,7 +34,7 @@ const positionByScreenMap = {
   }
 }
 
-const AboutMe = () => {
+const AboutMe: React.FC = () => {
   const { y } = useScroll()
 
   const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
@@ -81,9 +82,6 @@ const AboutMe = () => {
             <span className="python-blue black-background">Py</span>
             <span className="python-yellow black-background">thon</span> and
             PostgreSQL
-          </p>
-          <p className="about-me-subtext">
-            {'(' + 'animations built from scratch' + ')'}
           </p>
         </div>
       </div>
