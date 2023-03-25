@@ -36,13 +36,8 @@ const positionByScreenMap = {
 const AboutMe = () => {
   const { y } = useScroll()
 
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(min-width: 1224px)',
-  })
   const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
-  const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
-  const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
 
   let meStartPositionX = isTabletOrMobile ? positionByScreenMap.mobile.me.start : positionByScreenMap.desktop.me.start
   let lightStartPositionX = isTabletOrMobile ? positionByScreenMap.mobile.light.start : positionByScreenMap.desktop.light.start
