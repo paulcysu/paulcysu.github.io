@@ -42,6 +42,6 @@ body::before {
   color: var(--python-yellow)
 }
 
-.python-background {
+.black-background {
   background: black
 }

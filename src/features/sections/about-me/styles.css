@@ -1,5 +1,6 @@
 .developer {
-  width: 250px;
+  width: 150px;
+  top: 200px;
 }
 
 .parallax {
@@ -24,7 +25,8 @@
 }
 
 .street-light {
-  width: 800px;
+  width: 500px;
+  top: -45px;
 }
 
 .about-me-text-container {
@@ -67,5 +69,15 @@
   
   .about-me-subtext {
     font-size: 2rem;
+  }
+
+  .developer {
+    width: 250px;
+    top: auto;
+  }
+
+  .street-light {
+    width: 800px;
+    top: auto;
   }
 }
