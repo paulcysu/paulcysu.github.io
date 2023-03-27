@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { useMediaQuery } from 'react-responsive'
 
 import IdleGhost from 'assets/cute_ghost_idle.png'
 import BlueGhost from 'assets/cute_ghost_blue.png'

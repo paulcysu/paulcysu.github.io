@@ -16,6 +16,19 @@ body {
   background: linear-gradient(0deg, black, ivory);
 }
 
+#error-page {
+  height: 100vh;
+  margin: 10vh;
+  text-align: center;
+}
+
+.ghost-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+}
+
 /* body::before {
   content: "";
   position: fixed;
