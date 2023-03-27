@@ -37,7 +37,7 @@ function Home() {
       <CardSection />
       <AboutMe />
       <Projects />
-      <Skills />
+      {/* <Skills /> */}
       <Contact />
     </div>
   )

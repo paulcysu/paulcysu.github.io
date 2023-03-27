@@ -10,6 +10,7 @@ interface Project {
   id: number;
   title: string;
   image: string;
+  tools: string[]
 }
 
 interface ProjectsProps {
@@ -20,16 +21,19 @@ const projects = [
     id: 1,
     title: "Bridge Diagnostics",
     image: BDLogin,
+    tools: ["React", "FastAPI"],
   },
   {
-    id: 1,
+    id: 2,
     title: "illūm",
     image: IllumLogin,
+    tools: ["React", "Laravel"],
   },
   {
-    id: 1,
+    id: 3,
     title: "CelebrateAbility",
     image: NALogin,
+    tools: ["React"],
   },
 ]
 
@@ -45,7 +49,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
 
       if (section === null) return 
       
-      if (sectionTop < windowHeight * 1) {
+      if (sectionTop < windowHeight * 1.5) {
         section.classList.add('is-visible');
       } else {
         section.classList.remove('is-visible');
@@ -64,7 +68,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
       <h2 className="section-title">Projects</h2>
       <div className="project-list">
         {projects.map(project => (
-          <Project project={project}/>
+          <Project key={project.id} project={project}/>
         ))}
       </div>
     </div>
