@@ -13,7 +13,7 @@ import './main.css'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/portfolio",
     element: <Home />,
     errorElement: <ErrorPage />
   },
