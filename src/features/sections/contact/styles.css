@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 25vh 0;
 }
 
 .contact-list {
@@ -15,7 +16,7 @@
 }
 
 .ghost {
-  width: 400px;
+  width: 300px;
   border-radius: 50px;
 }
 
@@ -31,5 +32,10 @@
   .contact {
     margin: 30vh 5vw;
     display: flex;
+  }
+
+  .ghost {
+    width: 400px;
+    border-radius: 50px;
   }
 }

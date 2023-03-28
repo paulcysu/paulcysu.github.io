@@ -1,15 +1,18 @@
 import React, { useRef, useEffect } from 'react';
 import Project from './Project';
 import BDLogin from 'assets/bd/bd-login.png';
+import BDReport from 'assets/bd/bd-report.png';
+import BDTable from 'assets/bd/bd-uti-table.png';
 import IllumLogin from 'assets/tf/illum-login.png';
-import NALogin from 'assets/na/newport-applications-celebrateability.png';
+import IllumCalender from 'assets/tf/illum-calendar.png';
+import IllumBusinessPlan from 'assets/tf/illum-business-plan.png';
 
 import './styles.css';  
 
 interface Project {
   id: number;
   title: string;
-  image: string;
+  images: string[];
   tools: string[]
 }
 
@@ -20,20 +23,14 @@ const projects = [
   {
     id: 1,
     title: "Bridge Diagnostics",
-    image: BDLogin,
+    images: [BDLogin, BDReport, BDTable],
     tools: ["React", "FastAPI"],
   },
   {
     id: 2,
     title: "illūm",
-    image: IllumLogin,
+    images: [IllumLogin, IllumCalender, IllumBusinessPlan],
     tools: ["React", "Laravel"],
-  },
-  {
-    id: 3,
-    title: "CelebrateAbility",
-    image: NALogin,
-    tools: ["React"],
   },
 ]
 
@@ -49,7 +46,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
 
       if (section === null) return 
       
-      if (sectionTop < windowHeight * 1.5) {
+      if (sectionTop < windowHeight * 2) {
         section.classList.add('is-visible');
       } else {
         section.classList.remove('is-visible');
@@ -65,7 +62,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
 
   return (
     <div className="project-section" ref={sectionRef}>
-      <h2 className="section-title">Projects</h2>
+      <p className="section-title">Projects</p>
       <div className="project-list">
         {projects.map(project => (
           <Project key={project.id} project={project}/>
