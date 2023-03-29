@@ -68,7 +68,7 @@ const AboutMe: React.FC = () => {
         <div className="about-me-text-container">
           <p className="about-me-title">About Me</p>
           <p className="about-me-text">
-            I'm a Full Stack Developer in California
+            I'm a Web Developer in California
           </p>
           <p className="about-me-text">
             Strong in{' '}
@@ -78,7 +78,7 @@ const AboutMe: React.FC = () => {
             and React
           </p>
           <p className="about-me-text">
-            But also great at{' '}
+            and I can help out with {' '}
             <span className="python-blue black-background">Py</span>
             <span className="python-yellow black-background">thon</span> and
             PostgreSQL
